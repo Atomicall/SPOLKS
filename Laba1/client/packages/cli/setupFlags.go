@@ -1,18 +1,9 @@
-package menu
+package cli
 
 import (
 	"flag"
 	"os"
 	"time"
-)
-
-var (
-	EchoFlagInput        string
-	DownloadFlagInput    string
-	TimeoutFlagInput     time.Duration
-	DateFlagInput        bool
-	CloseFlagInput       bool
-	InteractiveFlagInput bool
 )
 
 func SetupFlagsAndParse() *flag.FlagSet {

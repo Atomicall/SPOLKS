@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/Atomicall/SPOLKS/Laba1/client/packages/menu"
+	"github.com/Atomicall/SPOLKS/Laba1/client/packages/cli"
 )
 
 func main() {
-	flagSet := menu.SetupFlagsAndParse()
+	flagSet := cli.SetupFlagsAndParse()
 
-	if flagSet.Parsed() && menu.EchoFlagInput != "" {
-		fmt.Printf("It is client! Your input: %v\n", menu.EchoFlagInput)
+	if flagSet.Parsed() && cli.EchoFlagInput != "" {
+		fmt.Printf("It is client! Your input: %v\n", cli.EchoFlagInput)
 	}
 }

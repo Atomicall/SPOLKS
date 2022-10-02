@@ -1,4 +1,4 @@
-package sendfile
+package commands
 
 import (
 	"fmt"

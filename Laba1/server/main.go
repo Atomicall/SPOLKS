@@ -5,7 +5,7 @@ import (
 	"net"
 	"os"
 
-	sendfile "github.com/Atomicall/SPOLKS/Laba1/server/packages/sendFile"
+	"github.com/Atomicall/SPOLKS/Laba1/server/packages/commands"
 )
 
 func main() {
@@ -24,6 +24,6 @@ func main() {
 			os.Exit(1)
 		}
 		fmt.Println("Client connected")
-		sendfile.SendFileToClient(connection)
+		commands.SendFileToClient(connection)
 	}
 }

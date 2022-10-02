@@ -1,0 +1,8 @@
+- Implement closing server by command from client
+- Implement echoing messages from client
+- Implement showing local time on the server to the client
+- Implement downloading file from server to client
+- Implement uploading file to the server 
+- Implement command-line interface to launch client commands 
+- Implement interactive interface to launch client commands 
+- Implement logging 

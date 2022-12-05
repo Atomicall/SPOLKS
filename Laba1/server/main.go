@@ -1,29 +1,32 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net"
-	"os"
-
-	"github.com/Atomicall/SPOLKS/Laba1/server/packages/commands"
+	"strings"
+	//"github.com/Atomicall/SPOLKS/Laba1/server/packages/commands"
 )
 
 func main() {
-	server, err := net.Listen("tcp", "localhost:27001")
-	if err != nil {
-		fmt.Println("Error listetning: ", err)
-		os.Exit(1)
-	}
-	defer server.Close()
-
-	fmt.Println("Server started! Waiting for connections...")
+	ln, _ := net.ListenTCP("tcp", ":30000")
+	fmt.Printf("Server started at address %v", ln.Addr())
+	// Открываем порт
+	conn, _ := ln.AcceptTCP()
+	conn.
+	// Запускаем цикл
 	for {
-		connection, err := server.Accept()
+		// Будем прослушивать все сообщения разделенные \n
+		message, err := bufio.NewReader(conn).ReadString('\n')
 		if err != nil {
-			fmt.Println("Error: ", err)
-			os.Exit(1)
+			fmt.Printf("Error occured: %v", err)
+			break
 		}
-		fmt.Println("Client connected")
-		commands.SendFileToClient(connection)
+		// Распечатываем полученое сообщение
+		fmt.Print(`Message Received:`, string(message))
+		// Процесс выборки для полученной строки
+		newmessage := strings.ToUpper(message)
+		// Отправить новую строку обратно клиенту
+		conn.Write([]byte(newmessage + "\n"))
 	}
 }

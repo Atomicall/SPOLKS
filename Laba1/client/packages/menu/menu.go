@@ -20,7 +20,7 @@ func Menu() {
 		SetTextColor(tcell.ColorGreen).
 		SetText("(q) to quit")
 	app.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
-		if event.Rune() == 113 {
+		if event.Rune() == 'q' {
 			app.Stop()
 		}
 		return event

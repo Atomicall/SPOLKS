@@ -3,7 +3,6 @@ package cli
 import (
 	"flag"
 	"os"
-	"time"
 )
 
 func SetupFlagsAndParse() *flag.FlagSet {
@@ -15,19 +14,13 @@ func SetupFlagsAndParse() *flag.FlagSet {
 		closeMessage       = "Closes remote server and client"
 		interactiveMessage = "Launches client as interactive session"
 	)
-	defaultTimeout, _ := time.ParseDuration("3m")
 	fs := flag.NewFlagSet("TCP Client", flag.ContinueOnError)
 	fs.SetOutput(os.Stdout)
-	fs.StringVar(&EchoFlagInput, "e", "", echoMessage)
 	fs.StringVar(&EchoFlagInput, "echo", "", "")
-	fs.StringVar(&DownloadFlagInput, "d", "", downloadMessage)
 	fs.StringVar(&DownloadFlagInput, "download", "", "")
 	fs.DurationVar(&TimeoutFlagInput, "timeout", defaultTimeout, timeoutMessage)
-	fs.BoolVar(&DateFlagInput, "t", false, dateMessage)
-	fs.BoolVar(&DateFlagInput, "time", false, "")
-	fs.BoolVar(&CloseFlagInput, "c", false, closeMessage)
+	fs.BoolVar(&DateFlagInput, "date", false, "")
 	fs.BoolVar(&CloseFlagInput, "close", false, "")
-	fs.BoolVar(&InteractiveFlagInput, "i", false, interactiveMessage)
 	fs.BoolVar(&InteractiveFlagInput, "interactive", false, "")
 	fs.Parse(os.Args[1:])
 	return fs

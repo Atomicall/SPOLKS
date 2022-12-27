@@ -15,9 +15,12 @@ cd ./<repo-name>
 ```
 
 3. Запусти в командной строке команду для создания виртуальной среды Python в текущей директории:
-`python -m venv venv
+```
+python -m venv venv
+```
 
 4. Активируй среду командой:
+
 *Windows:*
 ```
 ./venv/Scripts/activate

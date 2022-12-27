@@ -48,6 +48,7 @@ export PYTHONPATH="<path-to-your-project>:<path-to-your-project>/shared:<path-to
 ```
 
 7. Можно теперь запускать приложение:
+
 *Client - зайти в папку **client***
 ```
 python start_client.py

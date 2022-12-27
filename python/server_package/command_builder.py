@@ -11,6 +11,7 @@ from server_package.commands.udp.time_command import UdpTimeCommand
 from server_package.commands.udp.upload_command import UdpUploadCommand
 from shared.commands import Commands
 from shared.errors.invalid_message import InvalidMessageError
+from shared.utils.logger import Log
 
 
 def build_command(message: bytes):
@@ -18,6 +19,7 @@ def build_command(message: bytes):
 
     if isinstance(parsed_message['command'], str):
         command_type = parsed_message['command'].upper()
+        Log.logger.info(f"Issued TCP command - {command_type}")
 
         if command_type == Commands.ECHO.value:
             return EchoCommand(parsed_message)
@@ -37,6 +39,7 @@ def build_udp_command(sock: socket.socket, message: bytes, address):
 
     if isinstance(parsed_message['command'], str):
         command_type = parsed_message['command'].upper()
+        Log.logger.info(f"Issued UDP command - {command_type}")
 
         if command_type == Commands.UDP_ECHO.value:
             return UdpEchoCommand(sock, address)

@@ -6,6 +6,7 @@ from typing import Tuple
 from server_package.commands.command import Command
 from shared.udp.compose_packets import compose_packets
 from shared.udp.udp_transport import send
+from shared.utils.logger import Log
 
 
 class UdpTimeCommand(Command):
@@ -23,3 +24,5 @@ class UdpTimeCommand(Command):
         send(self._sock, self._address, message)
 
         print(f'Client requested current date. Date is: {date}')
+        Log.logger.info(
+            f'Client requested current date. Date is: {date}')

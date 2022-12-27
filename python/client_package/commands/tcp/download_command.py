@@ -5,7 +5,7 @@ from time import perf_counter
 
 from client_package.commands.command import Command
 from shared.commands import Commands
-from shared.consts import BIT_RATE_KBPS, MAX_PROBES, TCP_PACKET_SIZE
+from shared.consts import MAX_PROBES, TCP_PACKET_SIZE
 from shared.errors.disconnected import DisconnectedException
 from shared.utils.bit_rate import bit_rate
 from shared.utils.console import progress

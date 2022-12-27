@@ -4,6 +4,7 @@ import pickle as pk
 from server_package.commands.command import Command
 from shared.commands import Commands
 from shared.consts import TCP_PACKET_SIZE
+from shared.utils.logger import Log
 
 
 class DownloadCommand(Command):
@@ -27,7 +28,8 @@ class DownloadCommand(Command):
                 self.is_finished = True
                 print(
                     f'\nFile {self._file_name} has been successfully uploaded by server')
-
+                Log.logger.info(
+                    f'File {self._file_name} has been successfully uploaded by server')
             if not self._meta_data_sent:
                 self._meta_data_sent = True
 

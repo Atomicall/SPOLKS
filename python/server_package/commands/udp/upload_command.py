@@ -4,6 +4,7 @@ from typing import Tuple
 
 from server_package.commands.command import Command
 from shared.udp.udp_transport import receive
+from shared.utils.logger import Log
 
 
 class UdpUploadCommand(Command):
@@ -24,3 +25,5 @@ class UdpUploadCommand(Command):
 
         print(
             f'\nFile {self._file_name} has been successfully downloaded by server')
+        Log.logger.info(
+            f'File {self._file_name} has been successfully downloaded by server')

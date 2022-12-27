@@ -2,6 +2,7 @@ import os
 import pickle as pk
 
 from server_package.commands.command import Command
+from shared.utils.logger import Log
 
 
 class UploadCommand(Command):
@@ -39,6 +40,8 @@ class UploadCommand(Command):
             if self._file_size == os.path.getsize(self._file_name):
                 print(
                     f'\nFile {self._file_name} has been successfully downloaded by server')
+                Log.logger.info(
+                    f'File {self._file_name} has been successfully downloaded by server')
                 self.is_finished = True
 
             yield pk.dumps({'ACK': True})

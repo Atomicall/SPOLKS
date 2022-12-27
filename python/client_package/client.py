@@ -35,24 +35,20 @@ class Client:
 
                 except socket.timeout:
                     print(f'Connection timed out!\n')
-
                     self._connection.close()
-
                     continue
-
                 except InvalidCommand:
                     print(
                         'Provided command is invalid. Type \'help\' to get info about supported commands')
-
                     continue
 
                 except Exception as error:
                     print(f'Caught error: {error}')
-
                     if self._connection:
                         self._connection.close()
-
+                        print("Closed connection")
                     continue
+
             except KeyboardInterrupt:
                 print("Quiting client application!!\nClosing connection....")
                 try:

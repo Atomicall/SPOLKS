@@ -3,6 +3,7 @@ from typing import Tuple
 
 from server_package.commands.command import Command
 from shared.udp.udp_transport import receive
+from shared.utils.logger import Log
 
 
 class UdpEchoCommand(Command):
@@ -18,3 +19,5 @@ class UdpEchoCommand(Command):
         message = data.decode('utf-8')
 
         print(f'Echoed from client: {message}')
+        Log.logger.info(
+            f'Echoed from client: {message}')

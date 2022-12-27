@@ -6,7 +6,6 @@ from typing import Tuple
 
 from client_package.commands.command import Command
 from shared.commands import Commands
-from shared.consts import BIT_RATE_KBPS
 from shared.udp.compose_packets import (compose_packets,
                                         compose_packets_from_file)
 from shared.udp.udp_transport import send

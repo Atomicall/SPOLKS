@@ -1,6 +1,7 @@
 import pickle as pk
 
 from server_package.commands.command import Command
+from shared.utils.logger import Log
 
 
 class EchoCommand(Command):
@@ -32,5 +33,6 @@ class EchoCommand(Command):
 
         if data:
             print(f'Echo: {data}')
+            Log.logger.info(f'Echo: {data}')
 
         yield bytes(data, 'utf-8')

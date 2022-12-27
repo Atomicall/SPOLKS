@@ -38,22 +38,22 @@ pip install -r requirements.txt
 6. Настрой PYTHONPATH для того, чтобы Python видел модули проекта:
 *Windows*
 ```
-set PYTHONPATH=<path-to-your-project>;<path-to-your-project>/shared;<path-to-your-project>/client;<path-to-your-project>/server;%PYTHONPATH%;
+set PYTHONPATH=<path-to-your-project>;<path-to-your-project>/shared;<path-to-your-project>/client_package;<path-to-your-project>/server_package;%PYTHONPATH%;
 ```
 Или же через настройку ручную в панеле по управлению переменными среды.
 
 *Linux*
 ```
-export PYTHONPATH="<path-to-your-project>:<path-to-your-project>/shared:<path-to-your-project>/client:<path-to-your-project>/server":$PYTHONPATH
+export PYTHONPATH="<path-to-your-project>:<path-to-your-project>/shared:<path-to-your-project>/client_package:<path-to-your-project>/server_package":$PYTHONPATH
 ```
 
 7. Можно теперь запускать приложение:
 
-*Client - зайти в папку **client***
+*Client - зайти в папку **client_package***
 ```
 python start_client.py
 ```
-*Server - зайти в папку **server***
+*Server - зайти в папку **server_package***
 ```
 python start_server.py
 ```

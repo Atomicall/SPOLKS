@@ -5,7 +5,9 @@ from typing import Dict, List
 
 from server_package.command_builder import build_command, build_udp_command
 from server_package.commands.command import Command
-from shared.consts import (IS_LOCAL_HOST, TCP_PACKET_SIZE, TCP_SERVER_PORT,
+from shared.consts import (IS_LOCAL_HOST, KEEP_ALIVE_COUNT,
+                           KEEP_ALIVE_INTERVAL, KEEP_ALIVE_TIME,
+                           TCP_PACKET_SIZE, TCP_SERVER_PORT,
                            UDP_MAX_PACKET_SIZE, UDP_SERVER_PORT)
 from shared.udp.compose_packets import compose_packets
 from shared.udp.udp_transport import receive
@@ -160,9 +162,9 @@ class Server:
         connection.setblocking(False)
         sock_utils.set_socket_keep_alive(
             connection,
-            keep_alive_time=5,
-            keep_alive_interval=10,
-            max_probes=10)
+            keep_alive_time=KEEP_ALIVE_TIME,
+            keep_alive_interval=KEEP_ALIVE_INTERVAL,
+            max_probes=KEEP_ALIVE_COUNT)
         self._inputs.append(connection)
         self._clients[connection] = address
 

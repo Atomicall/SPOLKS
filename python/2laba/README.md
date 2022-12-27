@@ -38,7 +38,7 @@ pip install -r requirements.txt
 6. Настрой PYTHONPATH для того, чтобы Python видел модули проекта:
 *Windows*
 ```
-set PYTHONPATH=<path-to-your-project>;<path-to-your-project>/shared;<path-to-your-project>/client;<path-to-your-project>/server;%PYTHONPATH;
+set PYTHONPATH=<path-to-your-project>;<path-to-your-project>/shared;<path-to-your-project>/client;<path-to-your-project>/server;%PYTHONPATH%;
 ```
 Или же через настройку ручную в панеле по управлению переменными среды.
 

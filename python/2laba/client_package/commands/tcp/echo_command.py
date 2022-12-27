@@ -1,0 +1,38 @@
+import pickle as pk
+import socket
+
+from client_package.commands.command import Command
+from shared.commands import Commands
+from shared.consts import TCP_PACKET_SIZE
+from shared.utils.message import get_message
+
+
+class EchoCommand(Command):
+    _data: str
+    _connection: socket.socket
+
+    def __init__(self, params: list, connection: socket.socket):
+        self._data = ' '.join(params)
+        self._connection = connection
+
+    def execute(self):
+        data = {
+            'command': Commands.ECHO.value,
+            'data_length': len(
+                self._data)}
+
+        message = pk.dumps(data)
+
+        self._connection.sendall(message)
+
+        response = pk.loads(self._connection.recv(TCP_PACKET_SIZE))
+
+        if response['ACK'] is True:
+            self._connection.sendall(bytes(self._data, 'utf-8'))
+
+            echoed_data = get_message(self._connection, len(
+                self._data), TCP_PACKET_SIZE).decode('utf-8')
+
+            print(f'Echoed data: {echoed_data}')
+        else:
+            raise Exception('Server couldn\'t process the command!')

@@ -1,39 +1,35 @@
-2022-12-28 03:32:52,230 - [INFO] { logger: main.0; place: start_server.main:6 } Starting server..
-2022-12-28 03:32:52,230 - [INFO] { logger: main.0; place: server.__init__:36 } Initializing sockets...
-2022-12-28 03:32:52,232 - [INFO] { logger: main.0; place: server._init_sockets:158 } TCP Server created on address: 192.168.1.104:9090
-2022-12-28 03:32:52,232 - [INFO] { logger: main.0; place: server._init_sockets:160 } UDP Server created on address: 192.168.1.104:9091
-2022-12-28 03:33:04,594 - [INFO] { logger: main.0; place: server.work:60 } Got new TCP connection <socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
-2022-12-28 03:33:04,594 - [INFO] { logger: main.0; place: server._initialize_client:187 } New connection initialized - ('192.168.1.104', 20835); 
-2022-12-28 03:33:06,309 - [INFO] { logger: main.0; place: command_builder.build_command:22 } Issued TCP command - ECHO
-2022-12-28 03:33:06,310 - [INFO] { logger: main.0; place: echo_command.generate_message:36 } Echo: fdfd
-2022-12-28 03:33:06,311 - [INFO] { logger: main.0; place: server.work:118 } Command complete - <server_package.commands.tcp.echo_command.EchoCommand object at 0x0000029BFF72A550>;
-2022-12-28 03:33:08,420 - [INFO] { logger: main.0; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
-2022-12-28 03:33:09,115 - [INFO] { logger: main.0; place: upload_command.generate_message:43 } File img.jpg has been successfully downloaded by server
-2022-12-28 03:33:09,115 - [INFO] { logger: main.0; place: server.work:118 } Command complete - <server_package.commands.tcp.upload_command.UploadCommand object at 0x0000029BFF72A580>;
-2022-12-28 03:33:19,190 - [INFO] { logger: main.0; place: command_builder.build_command:22 } Issued TCP command - TIME
-2022-12-28 03:33:19,190 - [INFO] { logger: main.0; place: time_command.__init__:18 } Client requested current time. Time is 2022-12-28 03:33:19.190822
-2022-12-28 03:33:19,191 - [INFO] { logger: main.0; place: server.work:118 } Command complete - <server_package.commands.tcp.time_command.TimeCommand object at 0x0000029BFF72A580>;
-2022-12-28 03:33:22,449 - [INFO] { logger: main.0; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
-2022-12-28 03:33:26,398 - [INFO] { logger: main.0; place: upload_command.generate_message:43 } File img.CR2 has been successfully downloaded by server
-2022-12-28 03:33:26,398 - [INFO] { logger: main.0; place: server.work:118 } Command complete - <server_package.commands.tcp.upload_command.UploadCommand object at 0x0000029BFF72A580>;
-2022-12-28 03:33:33,080 - [INFO] { logger: main.0; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
-2022-12-28 03:33:34,356 - [INFO] { logger: main.0; place: download_command.generate_message:31 } File img.CR2 has been successfully uploaded by server
-2022-12-28 03:33:34,356 - [INFO] { logger: main.0; place: server.work:118 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x0000029BFF72A580>;
-2022-12-28 03:33:59,993 - [INFO] { logger: main.0; place: server.work:49 } Got UDP message from ('192.168.1.104', 53117) ;
-2022-12-28 03:33:59,994 - [INFO] { logger: main.0; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
-2022-12-28 03:34:11,107 - [INFO] { logger: main.0; place: download_command.generate_message:29 } File img.CR2 has been successfully uploaded by server
-2022-12-28 03:34:26,555 - [INFO] { logger: main.0; place: server.work:49 } Got UDP message from ('192.168.1.104', 53117) ;
-2022-12-28 03:34:26,555 - [INFO] { logger: main.0; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
-2022-12-28 03:34:28,939 - [INFO] { logger: main.0; place: download_command.generate_message:29 } File img.jpg has been successfully uploaded by server
-2022-12-28 03:35:09,091 - [INFO] { logger: main.0; place: server.work:49 } Got UDP message from ('192.168.1.104', 53117) ;
-2022-12-28 03:35:09,091 - [INFO] { logger: main.0; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_ECHO
-2022-12-28 03:35:09,496 - [INFO] { logger: main.0; place: echo_command.generate_message:22 } Echoed from client: img.jpg
-2022-12-28 03:35:16,924 - [INFO] { logger: main.0; place: server.work:49 } Got UDP message from ('192.168.1.104', 53117) ;
-2022-12-28 03:35:16,924 - [INFO] { logger: main.0; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_TIME
-2022-12-28 03:35:17,329 - [INFO] { logger: main.0; place: time_command.generate_message:27 } Client requested current date. Date is: 2022-12-28 03:35:16.924746
-2022-12-28 03:35:23,524 - [INFO] { logger: main.0; place: server._free_socket:202 } Clearing resources...
-2022-12-28 03:35:23,524 - [INFO] { logger: main.0; place: server._free_socket:211 } Clearing resources completed.
-2022-12-28 03:35:23,524 - [INFO] { logger: main.0; place: server.work:104 } Client closed connection - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
-2022-12-28 03:35:26,553 - [WARNING] { logger: main.0; place: server.work:131 } Closing server by KeyboardInterrupt....
-2022-12-28 03:35:26,553 - [INFO] { logger: main.0; place: server._free_socket:202 } Clearing resources...
-2022-12-28 03:35:26,553 - [INFO] { logger: main.0; place: server._free_socket:211 } Clearing resources completed.
+2022-12-28 04:35:06,505 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 04:35:06,505 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 04:35:06,507 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 192.168.1.104:9090
+2022-12-28 04:35:06,507 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 192.168.1.104:9091
+2022-12-28 04:35:06,507 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 04:35:15,850 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 04:35:15,852 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.1.104', 28129); 
+2022-12-28 04:35:17,596 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
+2022-12-28 04:35:17,603 - [INFO] { logger: main; place: upload_command.__init__:26 } Downloading File storage\img.CR2
+2022-12-28 04:35:27,140 - [INFO] { logger: main; place: upload_command.generate_message:48 } File storage\img.CR2 has been successfully downloaded by server
+2022-12-28 04:35:27,140 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.upload_command.UploadCommand object at 0x000002A7B187A520>;
+2022-12-28 04:35:32,692 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 04:35:32,692 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 04:35:35,742 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 04:35:35,742 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000002A7B187A520>;
+2022-12-28 04:35:45,945 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.1.104', 61333) ;
+2022-12-28 04:35:45,945 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 04:35:45,945 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 04:35:48,933 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 04:35:54,310 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.1.104', 61333) ;
+2022-12-28 04:35:54,310 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_ECHO
+2022-12-28 04:35:54,721 - [INFO] { logger: main; place: echo_command.generate_message:22 } Echoed from client: gdfgdgdgd
+2022-12-28 04:35:59,714 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.1.104', 61333) ;
+2022-12-28 04:35:59,714 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 04:35:59,714 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 04:36:02,891 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 04:36:08,843 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.1.104', 61333) ;
+2022-12-28 04:36:08,844 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_TIME
+2022-12-28 04:36:09,249 - [INFO] { logger: main; place: time_command.generate_message:27 } Client requested current date. Date is: 2022-12-28 04:36:08.844032
+2022-12-28 04:36:12,662 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090), raddr=('192.168.1.104', 28129)>
+2022-12-28 04:36:12,663 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 04:36:12,663 - [INFO] { logger: main; place: server.work:117 } Client closed connection - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 04:36:15,696 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 04:36:15,696 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 04:36:15,697 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

@@ -27,7 +27,7 @@ class Logger():
         if not path.isdir(_LOG_PATH):
             os.mkdir(_LOG_PATH)
 
-        self.logger = logging.getLogger(filename)
+        self.logger = logging.getLogger(filename.split(".")[0])
         self.logger.setLevel(level=level)
         self._handler = logging.FileHandler(
             f"{path.join(_LOG_PATH, filename)}.log", mode="w")

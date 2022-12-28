@@ -13,3 +13,4 @@ WINDOWS_SIZE = 12
 IS_LOCAL_HOST = False
 LOG_LEVEL = "INFO"
 LOG_FOLDER = "logs"
+FILES_FOLDER = "storage"

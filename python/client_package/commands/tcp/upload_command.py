@@ -1,11 +1,12 @@
 import os
 import pickle as pk
 import socket
+from os import path
 from time import perf_counter
 
 from client_package.commands.command import Command
 from shared.commands import Commands
-from shared.consts import MAX_PROBES, TCP_PACKET_SIZE
+from shared.consts import FILES_FOLDER, MAX_PROBES, TCP_PACKET_SIZE
 from shared.utils.bit_rate import bit_rate
 from shared.utils.console import progress
 
@@ -21,8 +22,14 @@ class UploadCommand(Command):
     def execute(self):
         try:
 
-            file = open(self._file_name, 'rb')
-            file_size = os.path.getsize(self._file_name)
+            file = open(
+                path.join(
+                    FILES_FOLDER,
+                    self._file_name),
+                'rb')
+            file_size = os.path.getsize(path.join(
+                FILES_FOLDER,
+                self._file_name))
             start_time = perf_counter()
             self._send_request_message(self._file_name, file_size)
 

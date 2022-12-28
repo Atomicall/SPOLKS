@@ -1,7 +1,9 @@
 import os
 import pickle as pk
+from os import path
 
 from server_package.commands.command import Command
+from shared.consts import FILES_FOLDER
 from shared.utils.logger import Log
 
 
@@ -13,13 +15,16 @@ class UploadCommand(Command):
     is_finished = False
 
     def __init__(self, configuration: dict):
-        self._file_name = configuration['file_name']
+        self._file_name = path.join(
+            str(FILES_FOLDER), configuration['file_name'])
         self._file_size = configuration['file_size']
 
         if os.path.exists(self._file_name):
             os.remove(self._file_name)
 
         print(f'Downloading File {self._file_name}')
+        Log.logger.info(
+            f'Downloading File {self._file_name}')
 
     def set_response(self, response: bytes):
         self._data = response

@@ -1,3 +1,4 @@
+import os
 import pickle as pk
 import socket
 from select import select
@@ -5,10 +6,9 @@ from typing import Dict, List
 
 from server_package.command_builder import build_command, build_udp_command
 from server_package.commands.command import Command
-from shared.consts import (IS_LOCAL_HOST, KEEP_ALIVE_COUNT,
+from shared.consts import (FILES_FOLDER, IS_LOCAL_HOST, KEEP_ALIVE_COUNT,
                            KEEP_ALIVE_INTERVAL, KEEP_ALIVE_TIME,
-                           TCP_PACKET_SIZE, TCP_SERVER_PORT,
-                           UDP_MAX_PACKET_SIZE, UDP_SERVER_PORT)
+                           TCP_PACKET_SIZE, TCP_SERVER_PORT, UDP_SERVER_PORT)
 from shared.udp.compose_packets import compose_packets
 from shared.udp.udp_transport import receive
 from shared.utils import ip
@@ -35,6 +35,19 @@ class Server:
     def __init__(self):
         Log.logger.info("Initializing sockets...")
         self._init_sockets()
+        if not os.path.exists(FILES_FOLDER):
+            os.mkdir(FILES_FOLDER)
+            Log.logger.info(
+                f"Created folder for files - {FILES_FOLDER}")
+            Log.logger.warning(
+                f"There is no files in folder for files - {FILES_FOLDER}")
+        else:
+            Log.logger.info(
+                f"Found existing folder for files - {FILES_FOLDER}")
+            if len(os.listdir(FILES_FOLDER)) == 0:
+                print("Warning: there is no files in folder for files!")
+                Log.logger.warning(
+                    f"There is no files in folder for files - {FILES_FOLDER}")
 
     def work(self):
         while True:
@@ -199,7 +212,7 @@ class Server:
         print(f'Client connected. Address {address}')
 
     def _free_socket(self, sock: socket.socket):
-        Log.logger.info("Clearing resources...")
+        Log.logger.info(f"Closing socket... - {sock}")
         if sock in self._inputs:
             self._inputs.remove(sock)
         if sock in self._outputs:
@@ -208,6 +221,5 @@ class Server:
             del self._issued_commands[sock]
         if sock in self._clients:
             del self._clients[sock]
-        Log.logger.info("Clearing resources completed.")
-
         sock.close()
+        Log.logger.info(f"Closed the socket - {sock}")

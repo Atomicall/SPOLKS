@@ -1,0 +1,35 @@
+2022-12-28 03:57:58,226 - [INFO] { logger: main.6; place: start_server.main:6 } Starting server..
+2022-12-28 03:57:58,227 - [INFO] { logger: main.6; place: server.__init__:36 } Initializing sockets...
+2022-12-28 03:57:58,228 - [INFO] { logger: main.6; place: server._init_sockets:171 } TCP Server created on address: 192.168.1.104:9090
+2022-12-28 03:57:58,228 - [INFO] { logger: main.6; place: server._init_sockets:173 } UDP Server created on address: 192.168.1.104:9091
+2022-12-28 03:57:58,229 - [INFO] { logger: main.6; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 03:58:02,584 - [INFO] { logger: main.6; place: server.work:62 } Got UDP message from ('192.168.1.104', 53614) ;
+2022-12-28 03:58:02,584 - [INFO] { logger: main.6; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 03:58:02,586 - [INFO] { logger: main.6; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 03:58:04,722 - [INFO] { logger: main.6; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 03:58:32,868 - [INFO] { logger: main.6; place: server.work:62 } Got UDP message from ('192.168.1.104', 53614) ;
+2022-12-28 03:58:32,869 - [INFO] { logger: main.6; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_UPLOAD
+2022-12-28 03:58:32,869 - [INFO] { logger: main.6; place: upload_command.__init__:22 } Downloading File storage\img.jpg
+2022-12-28 03:58:35,086 - [INFO] { logger: main.6; place: upload_command.generate_message:33 } File storage\img.jpg has been successfully downloaded by server
+2022-12-28 03:58:39,889 - [INFO] { logger: main.6; place: server.work:73 } Got new TCP connection <socket.socket fd=356, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 03:58:39,889 - [INFO] { logger: main.6; place: server._initialize_client:200 } New connection initialized - ('192.168.1.104', 21642); 
+2022-12-28 03:58:47,404 - [INFO] { logger: main.6; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 03:58:47,404 - [INFO] { logger: main.6; place: download_command.__init__:24 } Uploading File storage\img.jpg
+2022-12-28 03:58:47,629 - [INFO] { logger: main.6; place: download_command.generate_message:36 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 03:58:47,629 - [INFO] { logger: main.6; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001F56921A310>;
+2022-12-28 03:58:53,794 - [INFO] { logger: main.6; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
+2022-12-28 03:58:53,795 - [INFO] { logger: main.6; place: upload_command.__init__:26 } Downloading File storage\img.jpg
+2022-12-28 03:58:54,435 - [INFO] { logger: main.6; place: upload_command.generate_message:48 } File storage\img.jpg has been successfully downloaded by server
+2022-12-28 03:58:54,435 - [INFO] { logger: main.6; place: server.work:131 } Command complete - <server_package.commands.tcp.upload_command.UploadCommand object at 0x000001F56921A310>;
+2022-12-28 04:03:28,026 - [INFO] { logger: main.6; place: server._free_socket:215 } Closing socket... - <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090), raddr=('192.168.1.104', 21642)>
+2022-12-28 04:03:28,026 - [INFO] { logger: main.6; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 04:03:28,026 - [INFO] { logger: main.6; place: server.work:117 } Client closed connection - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 04:03:33,141 - [INFO] { logger: main.6; place: server.work:62 } Got UDP message from ('192.168.1.104', 53026) ;
+2022-12-28 04:03:33,141 - [INFO] { logger: main.6; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 04:03:33,142 - [INFO] { logger: main.6; place: download_command.__init__:23 } Uploading File storage\storage\img.CR2
+2022-12-28 04:03:33,142 - [ERROR] { logger: main.6; place: server.work:103 } Such file "None" does not exist. Please try another one
+2022-12-28 04:03:42,827 - [INFO] { logger: main.6; place: server.work:73 } Got new TCP connection <socket.socket fd=356, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 04:03:42,828 - [INFO] { logger: main.6; place: server._initialize_client:200 } New connection initialized - ('192.168.1.104', 21849); 
+2022-12-28 04:04:02,632 - [INFO] { logger: main.6; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
+2022-12-28 04:04:02,632 - [INFO] { logger: main.6; place: upload_command.__init__:26 } Downloading File storage\storage\img.jpg
+2022-12-28 04:04:02,634 - [CRITICAL] { logger: main.6; place: server.work:159 } Unexpected error caught! 

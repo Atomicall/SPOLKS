@@ -1,8 +1,9 @@
+import os
 import socket
 
 from client_package.errors.invalid_command import InvalidCommand
 from client_package.executor import Executor
-from shared.consts import UDP_SERVER_PORT
+from shared.consts import FILES_FOLDER, UDP_SERVER_PORT
 
 
 class Client:
@@ -15,6 +16,11 @@ class Client:
         self._set_udp_socket()
         self._executor = Executor(
             self._udp_sock, self._set_connection)
+        if not os.path.exists(FILES_FOLDER):
+            os.mkdir(FILES_FOLDER)
+        else:
+            if len(os.listdir(FILES_FOLDER)) == 0:
+                print("Warning: there is no files in folder for files!")
 
     def _set_udp_socket(self):
         self._udp_sock = socket.socket(

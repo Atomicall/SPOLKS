@@ -1,11 +1,12 @@
 import os
 import pickle as pk
 import socket
+from os import path
 from time import perf_counter
 
 from client_package.commands.command import Command
 from shared.commands import Commands
-from shared.consts import MAX_PROBES, TCP_PACKET_SIZE
+from shared.consts import FILES_FOLDER, MAX_PROBES, TCP_PACKET_SIZE
 from shared.errors.disconnected import DisconnectedException
 from shared.utils.bit_rate import bit_rate
 from shared.utils.console import progress
@@ -25,7 +26,7 @@ class DownloadCommand(Command):
 
         read_bytes = 0
         probes = 0
-        with open(self._file_name, 'wb') as file:
+        with open(path.join(FILES_FOLDER, self._file_name), 'wb') as file:
             while read_bytes < self._file_size:
                 try:
                     data = self._connection.recv(TCP_PACKET_SIZE)

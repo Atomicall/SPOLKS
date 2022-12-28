@@ -1,0 +1,9 @@
+2022-12-28 03:46:23,958 - [INFO] { logger: main.2; place: start_server.main:6 } Starting server..
+2022-12-28 03:46:23,958 - [INFO] { logger: main.2; place: server.__init__:36 } Initializing sockets...
+2022-12-28 03:46:23,960 - [INFO] { logger: main.2; place: server._init_sockets:171 } TCP Server created on address: 192.168.1.104:9090
+2022-12-28 03:46:23,960 - [INFO] { logger: main.2; place: server._init_sockets:173 } UDP Server created on address: 192.168.1.104:9091
+2022-12-28 03:46:23,960 - [INFO] { logger: main.2; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 03:46:23,960 - [WARNING] { logger: main.2; place: server.__init__:49 } There is no files in folder for files - storage
+2022-12-28 03:49:26,585 - [WARNING] { logger: main.2; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 03:49:26,587 - [INFO] { logger: main.2; place: server._free_socket:215 } Closing socket... - <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 03:49:26,588 - [INFO] { logger: main.2; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

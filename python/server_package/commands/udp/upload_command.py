@@ -1,8 +1,10 @@
 import os
 import socket
+from os import path
 from typing import Tuple
 
 from server_package.commands.command import Command
+from shared.consts import FILES_FOLDER
 from shared.udp.udp_transport import receive
 from shared.utils.logger import Log
 
@@ -14,8 +16,11 @@ class UdpUploadCommand(Command):
                  address: Tuple[str, int], configuration: dict):
         self._sock = sock
         self._address = address
-        self._file_name = configuration['file_name']
-
+        self._file_name = path.join(
+            str(FILES_FOLDER),
+            configuration['file_name'])
+        Log.logger.info(
+            f'Downloading File {self._file_name}')
         if os.path.exists(self._file_name):
             os.remove(self._file_name)
 

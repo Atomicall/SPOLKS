@@ -1,9 +1,10 @@
 import os
 import pickle as pk
+from os import path
 
 from server_package.commands.command import Command
 from shared.commands import Commands
-from shared.consts import TCP_PACKET_SIZE
+from shared.consts import FILES_FOLDER, TCP_PACKET_SIZE
 from shared.utils.logger import Log
 
 
@@ -15,9 +16,13 @@ class DownloadCommand(Command):
     _sent_bytes: int = 0
     is_finished = False
 
-    def __init__(self, config_dict: dict):
-        self._file_name = config_dict['file_name']
+    def __init__(self, configuration: dict):
+        self._file_name = path.join(
+            str(FILES_FOLDER),
+            configuration['file_name'])
         self._file_size = os.path.getsize(self._file_name)
+        Log.logger.info(
+            f'Uploading File {self._file_name}')
 
     def set_response(self, response: bytes):
         self._data = response

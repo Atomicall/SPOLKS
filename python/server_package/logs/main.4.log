@@ -1,0 +1,18 @@
+2022-12-28 03:52:02,570 - [INFO] { logger: main.4; place: start_server.main:6 } Starting server..
+2022-12-28 03:52:02,571 - [INFO] { logger: main.4; place: server.__init__:36 } Initializing sockets...
+2022-12-28 03:52:02,572 - [INFO] { logger: main.4; place: server._init_sockets:171 } TCP Server created on address: 192.168.1.104:9090
+2022-12-28 03:52:02,572 - [INFO] { logger: main.4; place: server._init_sockets:173 } UDP Server created on address: 192.168.1.104:9091
+2022-12-28 03:52:02,573 - [INFO] { logger: main.4; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 03:52:19,999 - [INFO] { logger: main.4; place: server.work:73 } Got new TCP connection <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 03:52:20,002 - [INFO] { logger: main.4; place: server._initialize_client:200 } New connection initialized - ('192.168.1.104', 21427); 
+2022-12-28 03:52:24,169 - [INFO] { logger: main.4; place: server.work:62 } Got UDP message from ('192.168.1.104', 63357) ;
+2022-12-28 03:52:24,169 - [INFO] { logger: main.4; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_ECHO
+2022-12-28 03:52:24,573 - [INFO] { logger: main.4; place: echo_command.generate_message:22 } Echoed from client: gdfgdgdgd
+2022-12-28 03:52:27,030 - [INFO] { logger: main.4; place: server.work:62 } Got UDP message from ('192.168.1.104', 63357) ;
+2022-12-28 03:52:27,030 - [INFO] { logger: main.4; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 03:52:27,030 - [ERROR] { logger: main.4; place: server.work:103 } Such file "None" does not exist. Please try another one
+2022-12-28 03:54:40,242 - [WARNING] { logger: main.4; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 03:54:40,242 - [INFO] { logger: main.4; place: server._free_socket:215 } Closing socket... - <socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090), raddr=('192.168.1.104', 21427)>
+2022-12-28 03:54:40,242 - [INFO] { logger: main.4; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 03:54:40,242 - [INFO] { logger: main.4; place: server._free_socket:215 } Closing socket... - <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.1.104', 9090)>
+2022-12-28 03:54:40,242 - [INFO] { logger: main.4; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

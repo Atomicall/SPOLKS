@@ -2,8 +2,8 @@ import socket
 
 from client_package.commands.command import Command
 from client_package.errors.invalid_command import InvalidCommand
-from shared.consts import (KEEP_ALIVE_COUNT, KEEP_ALIVE_INTERVAL,
-                           KEEP_ALIVE_TIME, CLIENT_TIMEOUT)
+from shared.consts import (CLIENT_TIMEOUT, KEEP_ALIVE_COUNT,
+                           KEEP_ALIVE_INTERVAL, KEEP_ALIVE_TIME)
 from shared.utils.socket import set_socket_keep_alive
 
 

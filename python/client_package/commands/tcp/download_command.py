@@ -11,7 +11,6 @@ from shared.consts import (CLIENT_TIMEOUT, CLIENT_TIMEOUT_COUNT, FILES_FOLDER,
 from shared.errors.disconnected import DisconnectedException
 from shared.utils.bit_rate import bit_rate
 from shared.utils.console import progress
-from shared.utils.logger import Log
 
 
 class DownloadCommand(Command):

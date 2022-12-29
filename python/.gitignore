@@ -2,3 +2,4 @@ venv
 .vscode
 __pycache__
 server_package\__pycache__
+.*.log

@@ -1,0 +1,77 @@
+2022-12-28 12:28:00,526 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 12:28:00,527 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 12:28:00,529 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 192.168.0.100:9090
+2022-12-28 12:28:00,529 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 192.168.0.100:9091
+2022-12-28 12:28:00,529 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 12:28:44,636 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:28:44,638 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.10', 60809); 
+2022-12-28 12:28:54,889 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:28:54,890 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.jpg
+2022-12-28 12:28:55,990 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:28:55,990 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001D22593A520>;
+2022-12-28 12:28:55,990 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:29:15,199 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:29:15,199 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:29:15,199 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:29:17,852 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:29:31,815 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:29:31,815 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:29:31,815 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:29:34,755 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:29:49,102 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:29:49,102 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:29:49,102 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:29:51,767 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:29:56,088 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:29:56,088 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:29:56,088 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:29:58,725 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:30:04,777 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:30:04,777 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:30:04,778 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:30:07,403 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:30:17,099 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:30:17,099 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:30:17,099 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:30:19,757 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:30:26,048 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:30:26,048 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_DOWNLOAD
+2022-12-28 12:30:26,048 - [INFO] { logger: main; place: download_command.__init__:23 } Uploading File storage\img.jpg
+2022-12-28 12:30:28,692 - [INFO] { logger: main; place: download_command.generate_message:34 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 12:31:14,560 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:31:14,561 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:31:31,304 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:31:31,304 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001D22562AD90>;
+2022-12-28 12:31:31,305 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:31:33,695 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:31:33,696 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:31:50,930 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:31:50,930 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001D22562AD90>;
+2022-12-28 12:31:50,931 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:31:50,931 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:31:58,219 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:31:58,220 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:32:14,974 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:32:14,974 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001D22562AD90>;
+2022-12-28 12:32:14,974 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:32:21,343 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:32:21,343 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:32:38,716 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:32:38,717 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001D22562AD90>;
+2022-12-28 12:32:38,717 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:33:28,148 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
+2022-12-28 12:33:28,155 - [INFO] { logger: main; place: upload_command.__init__:26 } Downloading File storage\img.CR2
+2022-12-28 12:34:00,113 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:34:00,113 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_UPLOAD
+2022-12-28 12:34:00,113 - [INFO] { logger: main; place: upload_command.__init__:22 } Downloading File storage\img.jpg
+2022-12-28 12:34:02,940 - [INFO] { logger: main; place: upload_command.generate_message:33 } File storage\img.jpg has been successfully downloaded by server
+2022-12-28 12:34:07,869 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('192.168.0.10', 61104) ;
+2022-12-28 12:34:07,869 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_UPLOAD
+2022-12-28 12:34:07,869 - [INFO] { logger: main; place: upload_command.__init__:22 } Downloading File storage\img.jpg
+2022-12-28 12:34:10,615 - [INFO] { logger: main; place: upload_command.generate_message:33 } File storage\img.jpg has been successfully downloaded by server
+2022-12-28 12:34:57,053 - [ERROR] { logger: main; place: server.work:109 } Error with connection - ('192.168.0.10', 60809); [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-12-28 12:34:57,053 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.10', 60809)>
+2022-12-28 12:34:57,053 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:35:05,121 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 12:35:05,121 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=456, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:35:05,122 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

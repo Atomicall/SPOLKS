@@ -1,0 +1,25 @@
+2022-12-28 11:11:10,360 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 11:11:10,360 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 11:11:10,362 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 172.17.121.133:9090
+2022-12-28 11:11:10,362 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 172.17.121.133:9091
+2022-12-28 11:11:10,362 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 11:11:32,385 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=352, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.17.121.133', 9090)>
+2022-12-28 11:11:32,387 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('172.17.121.133', 21570); 
+2022-12-28 11:11:38,636 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 11:11:38,637 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.jpg
+2022-12-28 11:11:38,972 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.jpg has been successfully uploaded by server
+2022-12-28 11:11:38,972 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001A91FCFA520>;
+2022-12-28 11:11:46,819 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - UPLOAD
+2022-12-28 11:11:46,820 - [INFO] { logger: main; place: upload_command.__init__:26 } Downloading File storage\img.jpg
+2022-12-28 11:11:47,494 - [INFO] { logger: main; place: upload_command.generate_message:48 } File storage\img.jpg has been successfully downloaded by server
+2022-12-28 11:11:47,494 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.upload_command.UploadCommand object at 0x000001A91FCFA520>;
+2022-12-28 11:25:38,394 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.17.121.133', 9090), raddr=('172.17.121.133', 21570)>
+2022-12-28 11:25:38,394 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 11:25:38,395 - [INFO] { logger: main; place: server.work:117 } Client closed connection - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 11:25:41,615 - [INFO] { logger: main; place: server.work:62 } Got UDP message from ('172.17.121.133', 50909) ;
+2022-12-28 11:25:41,616 - [INFO] { logger: main; place: command_builder.build_udp_command:42 } Issued UDP command - UDP_UPLOAD
+2022-12-28 11:25:41,616 - [INFO] { logger: main; place: upload_command.__init__:22 } Downloading File storage\img.CR2
+2022-12-28 11:26:03,035 - [INFO] { logger: main; place: upload_command.generate_message:33 } File storage\img.CR2 has been successfully downloaded by server
+2022-12-28 11:36:18,265 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 11:36:18,265 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=352, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.17.121.133', 9090)>
+2022-12-28 11:36:18,266 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

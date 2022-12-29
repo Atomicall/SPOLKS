@@ -1,0 +1,47 @@
+2022-12-28 11:59:28,579 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 11:59:28,579 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 11:59:28,581 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 192.168.0.100:9090
+2022-12-28 11:59:28,581 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 192.168.0.100:9091
+2022-12-28 11:59:28,581 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 12:11:05,465 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:11:05,467 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.10', 64703); 
+2022-12-28 12:11:21,461 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:11:21,461 - [ERROR] { logger: main; place: server.work:103 } Such file "storage\img.CR1" does not exist. Please try another one
+2022-12-28 12:12:44,264 - [ERROR] { logger: main; place: server.work:109 } Error with connection - ('192.168.0.10', 64703); [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-12-28 12:12:44,265 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.10', 64703)>
+2022-12-28 12:12:44,265 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:13:09,773 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:13:09,774 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.10', 64706); 
+2022-12-28 12:13:19,055 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:13:19,055 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:13:36,388 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:13:36,388 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001B73A5DA4F0>;
+2022-12-28 12:13:36,389 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:14:20,019 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:14:20,020 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.100', 1676); 
+2022-12-28 12:14:59,247 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:14:59,247 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:14:59,585 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:14:59,586 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img2.CR2
+2022-12-28 12:15:02,622 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img2.CR2 has been successfully uploaded by server
+2022-12-28 12:15:02,622 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001B73A2CAD90>;
+2022-12-28 12:15:16,378 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:15:16,378 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001B73A5DA4F0>;
+2022-12-28 12:15:16,379 - [ERROR] { logger: main; place: server.work:122 } Caught error - 'command'
+2022-12-28 12:15:43,405 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:15:43,405 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:16:06,705 - [ERROR] { logger: main; place: server.work:109 } Error with connection - ('192.168.0.10', 64706); [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-12-28 12:16:06,706 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.10', 64706)>
+2022-12-28 12:16:06,706 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:16:26,553 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:16:26,553 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.10', 63706); 
+2022-12-28 12:16:40,158 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:16:40,158 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:17:01,494 - [ERROR] { logger: main; place: server.work:109 } Error with connection - ('192.168.0.10', 63706); [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-12-28 12:17:01,494 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=608, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.10', 63706)>
+2022-12-28 12:17:01,494 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:18:18,259 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 12:18:18,259 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.100', 1676)>
+2022-12-28 12:18:18,259 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:18:18,259 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=376, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:18:18,259 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

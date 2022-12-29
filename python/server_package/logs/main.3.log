@@ -1,0 +1,15 @@
+2022-12-28 12:18:27,984 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 12:18:27,984 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 12:18:27,986 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 192.168.119.241:9090
+2022-12-28 12:18:27,986 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 192.168.119.241:9091
+2022-12-28 12:18:27,986 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 12:18:37,171 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=408, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.119.241', 9090)>
+2022-12-28 12:18:37,173 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.119.65', 63378); 
+2022-12-28 12:18:39,875 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:18:39,875 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:18:55,226 - [ERROR] { logger: main; place: server.work:109 } Error with connection - ('192.168.119.65', 63378); [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-12-28 12:18:55,226 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.119.241', 9090), raddr=('192.168.119.65', 63378)>
+2022-12-28 12:18:55,226 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:27:46,618 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 12:27:46,619 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=408, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.119.241', 9090)>
+2022-12-28 12:27:46,619 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

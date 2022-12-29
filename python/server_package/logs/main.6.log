@@ -1,0 +1,17 @@
+2022-12-28 12:35:06,644 - [INFO] { logger: main; place: start_server.main:6 } Starting server..
+2022-12-28 12:35:06,645 - [INFO] { logger: main; place: server.__init__:36 } Initializing sockets...
+2022-12-28 12:35:06,646 - [INFO] { logger: main; place: server._init_sockets:171 } TCP Server created on address: 192.168.0.100:9090
+2022-12-28 12:35:06,646 - [INFO] { logger: main; place: server._init_sockets:173 } UDP Server created on address: 192.168.0.100:9091
+2022-12-28 12:35:06,646 - [INFO] { logger: main; place: server.__init__:45 } Found existing folder for files - storage
+2022-12-28 12:35:12,526 - [INFO] { logger: main; place: server.work:73 } Got new TCP connection <socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:35:12,528 - [INFO] { logger: main; place: server._initialize_client:200 } New connection initialized - ('192.168.0.10', 61874); 
+2022-12-28 12:35:30,667 - [INFO] { logger: main; place: command_builder.build_command:22 } Issued TCP command - DOWNLOAD
+2022-12-28 12:35:30,667 - [INFO] { logger: main; place: download_command.__init__:24 } Uploading File storage\img.CR2
+2022-12-28 12:36:23,936 - [INFO] { logger: main; place: download_command.generate_message:36 } File storage\img.CR2 has been successfully uploaded by server
+2022-12-28 12:36:23,936 - [INFO] { logger: main; place: server.work:131 } Command complete - <server_package.commands.tcp.download_command.DownloadCommand object at 0x000001706560A520>;
+2022-12-28 12:36:40,816 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=384, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090), raddr=('192.168.0.10', 61874)>
+2022-12-28 12:36:40,816 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:36:40,816 - [INFO] { logger: main; place: server.work:117 } Client closed connection - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+2022-12-28 12:36:43,826 - [WARNING] { logger: main; place: server.work:144 } Closing server by KeyboardInterrupt....
+2022-12-28 12:36:43,826 - [INFO] { logger: main; place: server._free_socket:215 } Closing socket... - <socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.0.100', 9090)>
+2022-12-28 12:36:43,826 - [INFO] { logger: main; place: server._free_socket:225 } Closed the socket - <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>

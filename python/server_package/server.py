@@ -164,14 +164,14 @@ class Server:
         self._set_tcp_main_socket()
         endpoint = f"{ip.get_local_ip_address(is_local_host=IS_LOCAL_HOST)}"
         print(
-            f'TCP Server created on address: {endpoint}:{self.TCP_PORT}')
+            f'TCP Server created on address: {endpoint}:{self.TCP_PORT} - (CTRL+C to exit)')
         self._set_udp_socket()
         print(
-            f'UDP Server created on address: {endpoint}:{self.UDP_PORT}')
+            f'UDP Server created on address: {endpoint}:{self.UDP_PORT} - (CTRL+C to exit)')
         Log.logger.info(
-            f'TCP Server created on address: {endpoint}:{self.TCP_PORT}')
+            f'TCP Server created on address: {endpoint}:{self.TCP_PORT} - (CTRL+C to exit)')
         Log.logger.info(
-            f'UDP Server created on address: {endpoint}:{self.UDP_PORT}')
+            f'UDP Server created on address: {endpoint}:{self.UDP_PORT} - (CTRL+C to exit)')
 
     def _set_tcp_main_socket(self):
         # creating socket that accepts IPv4 address and works with TCP
